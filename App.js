@@ -1,23 +1,28 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {Router, Scene, Modal} from 'react-native-router-flux';
+import styles from './AppStyle'
+
+import Home from './MainView/Home';
+import AppIcons from './Themes/Images'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <Router>
+        <Scene>
+          <Scene key='home' component={Home} title='First App' titleStyle={styles.homeTitleStyle} navigationBarStyle={styles.homeNavStyle}
+          onRight={()=>this.infoButtonFunction()} rightTitle='Info' rightButtonStyle={styles.rightButtonStyle} rightButtonTextStyle={styles.rightTextStyle}
+          onLeft={()=>this.hambugerButtonFunction()} leftTitle='Menu' leftButtonStyle={styles.leftButtonStyle} leftButtonTextStyle={styles.leftTextStyle}
+          />
+        </Scene>
+      </Router>
     );
   }
+  infoButtonFunction(){
+    alert('Welldone')
+  }
+  hambugerButtonFunction(){
+    alert('Welcome')
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
