@@ -12,6 +12,11 @@ const icons = {
   leaderboardIcon: require('./Icons/MainIcons/Leaderboard.png'),
   infoIcon: require('./NavIcons/Info.png'),
   hambugerIcon: require('./NavIcons/hambuger.png'),
+  teamImage: require('./TEAM.jpg'),
+  activityFeedLikeIcon: require('./Icons/ActivityFeed/ActivityFeed_Like.png'),
+  activityFeedCommentIcon: require('./Icons/ActivityFeed/ActivityFeed_Comment.png'),
+  activityFeedShareIcon: require('./Icons/ActivityFeed/ActivityFeed_Share.png'),
+  activityFeedLikeFullIcon: require('./Icons/ActivityFeed/ActivityFeed_LikeFull.png')
 }
 
 export default icons

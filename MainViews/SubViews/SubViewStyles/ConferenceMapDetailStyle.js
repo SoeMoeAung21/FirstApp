@@ -3,23 +3,9 @@ import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, B
 var device = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-homeNavStyle:{
-  backgroundColor: '#b3003b',
-},
-homeTitleStyle:{
-  color: 'white',
-},
-rightButtonStyle:{
-  right: 5
-},
-leftButtonStyle:{
-  left: 5
-},
-rightTextStyle:{
-  color: 'white',
-},
-leftTextStyle:{
-  color: 'white',
+viewStyle:{
+  flex: 1,
+  backgroundColor: 'green',
 }
 });
 

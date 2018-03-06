@@ -8,7 +8,7 @@ mainContainer: {
 },
 upperContainer:{
   flex: 0.3,
-  backgroundColor: '#00ff00'
+  backgroundColor: '#00b33c'
 },
 flatListStyle:{
   width: device.width -10,

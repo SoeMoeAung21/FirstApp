@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, Button, Dimensions, ActivityIndicator, Animated, FlatList  } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, Button, Dimensions, ActivityIndicator, Animated, FlatList, TouchableHighlight  } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import styles from './Styles/HomeStyle'
 //imported sences
 import AppIcons from '../Themes/Images'
+
+var textArray =['j','h','a','e','r','g','b','q'];
 
 export default class App extends React.Component {
 
@@ -22,12 +24,18 @@ export default class App extends React.Component {
             {key: 9, image: AppIcons.conferenceMapIcon, title: 'Conference Map'},
             {key: 10, image: AppIcons.socialMediaIcon, title: 'Social Media'},
             {key: 11, image: AppIcons.leaderboardIcon, title: 'Lederboard'},
-      ]
+      ],
+      testData: []
 
     };
   }
 
  componentDidMount(){
+
+
+   this.setState({
+     testData:  textArray.slice(2, 7)
+   })
 
  }
 
@@ -35,6 +43,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.mainContainer}>
       <View style={styles.upperContainer}>
+          <Text>{this.state.testData}</Text>
       </View>
       <FlatList contentContainerStyle={styles.flatListStyle}
       data={this.state.data}
@@ -47,14 +56,45 @@ export default class App extends React.Component {
 
   renderListItem(item){
   return(
-
+      <TouchableHighlight onPress={()=>this.subView(item)} underlayColor= 'transparent'>
         <View style={styles.secondContainer}>
           <Image style={styles.imageStyle} source={item.image}/>
           <Text style={styles.titleStyle}>{item.title}</Text>
         </View>
-
+      </TouchableHighlight>
   )
 }
-
+subView(item){
+  if (item.key===1){
+    alert(item.title)
+    //Actions.myProfile()
+  }else if(item.key=== 2){
+    Actions.activityFeed()
+  }else if(item.key=== 3){
+    alert(item.title)
+    //Actions.agenda()
+  }else if(item.key === 4){
+    Actions.speaker()
+  }else if(item.key === 5){
+    alert(item.title)
+    //Actions.exhibitor()
+  }else if(item.key === 6){
+    alert(item.title)
+    //Actions.sponsor()
+  }else if(item.key === 7){
+    alert(item.title)
+    //Actions.attendee()
+  }else if(item.key === 8){
+    alert(item.title)
+    //Actions.survey()
+  }else if(item.key === 9){
+    Actions.conferenceMap()
+  }else if (item.key ===10){
+    alert(item.title)
+    //Actions.socialMedia()
+  }else if (item.key === 11){
+    Actions.lederboard()
+  }
+}
 
 }//End of APP class

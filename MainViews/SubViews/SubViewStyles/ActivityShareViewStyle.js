@@ -3,24 +3,20 @@ import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, B
 var device = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-homeNavStyle:{
-  backgroundColor: '#b3003b',
+shareViewStyle:{
+  backgroundColor: 'black',
+  position: 'absolute',
+  flex: 1,
+  width: device.width,
+  height: device.height,
 },
-homeTitleStyle:{
+closeTextStyle:{
+  fontSize: 18,
   color: 'white',
+  marginLeft: device.width - 70,
+  marginTop: 30
 },
-rightButtonStyle:{
-  right: 5
-},
-leftButtonStyle:{
-  left: 5
-},
-rightTextStyle:{
-  color: 'white',
-},
-leftTextStyle:{
-  color: 'white',
-}
+
 });
 
 export default styles;

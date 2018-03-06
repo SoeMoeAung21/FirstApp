@@ -3,24 +3,20 @@ import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, B
 var device = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-homeNavStyle:{
-  backgroundColor: '#b3003b',
-},
-homeTitleStyle:{
-  color: 'white',
-},
-rightButtonStyle:{
-  right: 5
-},
-leftButtonStyle:{
-  left: 5
-},
-rightTextStyle:{
-  color: 'white',
-},
-leftTextStyle:{
-  color: 'white',
-}
+  listViewStyle:{
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    alignItems: 'center',
+  },
+  conImageStyle:{
+    width: 50,
+    height: 50,
+    marginLeft: 10,
+  },
+  listTextStyle:{
+    marginLeft: 20,
+    fontSize: 16,
+  }
 });
 
 export default styles;
