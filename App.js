@@ -12,7 +12,7 @@ import ConferenceMapDetail from './MainViews/SubViews/ConferenceMapDetail';
 import Lederboard from './MainViews/SubViews/Lederboard';
 import ActivityFeed from './MainViews/SubViews/ActivityFeed';
 import ActivityImageView from './MainViews/SubViews/ActivityImageView';
-import ActivityShareView from './MainViews/SubViews/ActivityShareView';
+import ActivityShare from './MainViews/SubViews/ActivityShare';
 
 export default class App extends React.Component {
 
@@ -44,7 +44,7 @@ constructor(props) {
           </Scene>
           </Scene>
             <Scene key='activityImageView' component={ActivityImageView}/>
-            <Scene key='activityShareView' component={ActivityShareView}/>
+            <Scene key='activityShareView' component={ActivityShare}/>
           </Lightbox>
 
       </Router>

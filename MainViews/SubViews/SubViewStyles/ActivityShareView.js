@@ -24,9 +24,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.shareViewStyle}>
-        <TouchableHighlight onPress={()=>this.close()} underlayColor= 'transparent'>
-          <Text style={styles.closeTextStyle}>Close</Text>
-        </TouchableHighlight>
+        
       </View>
     );
   }
