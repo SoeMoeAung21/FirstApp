@@ -16,7 +16,9 @@ const icons = {
   activityFeedLikeIcon: require('./Icons/ActivityFeed/ActivityFeed_Like.png'),
   activityFeedCommentIcon: require('./Icons/ActivityFeed/ActivityFeed_Comment.png'),
   activityFeedShareIcon: require('./Icons/ActivityFeed/ActivityFeed_Share.png'),
-  activityFeedLikeFullIcon: require('./Icons/ActivityFeed/ActivityFeed_LikeFull.png')
+  activityFeedLikeFullIcon: require('./Icons/ActivityFeed/ActivityFeed_LikeFull.png'),
+  cameraGrayIcon: require('./Icons/ActivityFeed/CameraGray.png'),
+  spiderman: require('./Spiderman.jpg')
 }
 
 export default icons

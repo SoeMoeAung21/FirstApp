@@ -4,7 +4,7 @@ var device = Dimensions.get('window');
 
 const styles = StyleSheet.create({
 shareViewStyle:{
-    alignItems: 'center',
+  alignItems: 'center',
   backgroundColor: 'rgba(0,0,0,0.75)',
   position: 'absolute',
   width: device.width,

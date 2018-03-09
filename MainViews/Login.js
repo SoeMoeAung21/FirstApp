@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, Button, Dimensions, ActivityIndicator, Animated, FlatList, TouchableHighlight, SectionList, KeyboardAvoidingView  } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, Button, Dimensions, ActivityIndicator, Animated, FlatList, TouchableHighlight, SectionList, KeyboardAvoidingView, MaskedViewIOS  } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import styles from './Styles/LoginStyle'
 //imported sences
@@ -25,7 +25,28 @@ export default class Login extends React.Component {
     return (
       <KeyboardAvoidingView style={styles.keyboardAvoidingStyle} behavior={'position'}>
         <Image style={styles.loginImageStyle} source= {require('./husky.jpg')}/>
-        <Text style={styles.appNameStyle}>SEAGATE</Text>
+        <MaskedViewIOS
+        style={{ flex: 1, flexDirection: 'row', height: '100%' }}
+        maskElement={
+          <View style={{
+            backgroundColor: 'transparent',
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+            <Text style={{
+              fontSize: 60,
+              color: 'red',
+              fontWeight: 'bold',
+            }}>
+              SEAGATE
+            </Text>
+          </View>
+        }
+      >
+      <Image style={{ flex: 1, height: '100%', backgroundColor: '#324376' }} source={require('./husky.jpg')}/>
+
+      </MaskedViewIOS>
         <TextInput style={styles.emailStyle} placeholder='Email'>
         </TextInput>
         <TextInput style={styles.passwordStyle} placeholder='Password' secureTextEntry={true}>

@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Slider, Switch, TextInput, Button, Dimensions, ActivityIndicator, Animated, FlatList, TouchableHighlight  } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import ImageSlider from 'react-native-image-slider';
 import styles from './Styles/HomeStyle'
 //imported sences
 import AppIcons from '../Themes/Images'
 
-var textArray =['j','h','a','e','r','g','b','q'];
+
 
 export default class App extends React.Component {
 
@@ -33,9 +34,7 @@ export default class App extends React.Component {
  componentDidMount(){
 
 
-   this.setState({
-     testData:  textArray.slice(2, 7)
-   })
+
 
  }
 
@@ -43,7 +42,9 @@ export default class App extends React.Component {
     return (
       <View style={styles.mainContainer}>
       <View style={styles.upperContainer}>
-          <Text>{this.state.testData}</Text>
+          <ImageSlider images={['http://openwalls.com/image/49228/thumb3_red_sky_mirrored_by_the_water.jpg',
+          'https://i.pinimg.com/originals/24/19/9b/24199bf533ebeac14c9b8b5579677a9d.jpg',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUtOxE7IC7A4ZakuDdzc1W0Cr3Mo_F9wlYDIJ3j7s-qEDEy21t']}/>
       </View>
       <FlatList contentContainerStyle={styles.flatListStyle}
       data={this.state.data}
